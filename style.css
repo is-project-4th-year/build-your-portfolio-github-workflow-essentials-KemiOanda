@@ -66,3 +66,15 @@ p, li, a {
     font-size: 0.9rem;
   }
 }
+.project {
+  transition: transform 0.3s ease;
+}
+
+.project:hover {
+  transform: scale(1.05);
+}
+
+nav a:hover {
+  color: #3498db;
+}
+
