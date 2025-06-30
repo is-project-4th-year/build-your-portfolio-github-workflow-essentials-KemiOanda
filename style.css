@@ -4,20 +4,21 @@ body {
   color: #222;
   margin: 0;
   padding: 0;
-  font-size: 1rem; /* Base font size */
+  font-size: 1rem;
   line-height: 1.6;
 }
 
-h1 {
-  font-size: 2.5rem; /* Scales with root font size */
+h1, h2 {
   color: #2c3e50;
   margin: 0.5em 0;
+}
+
+h1 {
+  font-size: 2.5rem;
 }
 
 h2 {
   font-size: 2rem;
-  color: #2c3e50;
-  margin: 0.5em 0;
 }
 
 p, li, a {
@@ -27,54 +28,76 @@ p, li, a {
   word-wrap: break-word;
 }
 
-.project {
-  width: 100%;
-  max-width: 600px;
-  margin: auto;
-  padding: 1em;
+header {
+  background-color: #fff;
+  text-align: center;
+  padding: 2rem 1rem;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
 }
 
-@media (max-width: 768px) {
-  h1 {
-    font-size: 2rem;
-  }
-
-  h2 {
-    font-size: 1.5rem;
-  }
-
-  nav ul {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  body {
-    font-size: 0.95rem;
-  }
+nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 0;
+  list-style: none;
+  flex-wrap: wrap;
 }
 
-@media (max-width: 480px) {
-  h1 {
-    font-size: 1.6rem;
-  }
-
-  h2 {
-    font-size: 1.3rem;
-  }
-
-  body {
-    font-size: 0.9rem;
-  }
-}
-.project {
-  transition: transform 0.3s ease;
-}
-
-.project:hover {
-  transform: scale(1.05);
+nav a {
+  text-decoration: none;
+  color: #2c3e50;
+  font-weight: 600;
 }
 
 nav a:hover {
   color: #3498db;
 }
 
+main {
+  padding: 2rem 1rem;
+}
+
+.project {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+}
+
+.project:hover {
+  transform: scale(1.03);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 1rem auto;
+}
+
+ul {
+  padding-left: 1.2rem;
+}
+
+footer {
+  text-align: center;
+  padding: 2rem;
+  background: #f0f0f0;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  h1 { font-size: 2rem; }
+  h2 { font-size: 1.5rem; }
+  body { font-size: 0.95rem; }
+  nav ul { flex-direction: column; align-items: center; }
+}
+
+@media (max-width: 480px) {
+  h1 { font-size: 1.6rem; }
+  h2 { font-size: 1.3rem; }
+  body { font-size: 0.9rem; }
+}
